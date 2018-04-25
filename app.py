@@ -5,6 +5,7 @@ Created on Fri Apr 20 09:53:26 2018
 @author: pkuntal
 """
 #from security import authenticate, identity
+import os
 from resources.user import UserRegister
 from resources.items import Item, ItemList
 from flask_restful import Api
@@ -28,7 +29,7 @@ app.config['JWT_EXPIRATION_DELTA'] = timedelta(seconds=1800)
 #app.config['JWT_AUTH_USERNAME_KEY'] = 'email'
 # putting Flask Modification tracker off because SQL Alchemy will use its own tracker
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', 'sqlite:///data.db') # 2nd val is default
 
 
 #customizing JWT auth response
