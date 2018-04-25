@@ -7,7 +7,7 @@ Created on Wed Apr 25 11:42:48 2018
 
 from app import app
 from flask_sqlalchemy import SQLAlchemy
-db=SQLAlchemy()
+db=SQLAlchemy(app)
 #from db import db
 db.init(app)
 
