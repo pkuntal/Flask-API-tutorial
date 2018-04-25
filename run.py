@@ -6,7 +6,9 @@ Created on Wed Apr 25 11:42:48 2018
 """
 
 from app import app
-from db import db
+from flask_sqlalchemy import SQLAlchemy
+db=SQLAlchemy()
+#from db import db
 db.init(app)
 
 @app.before_first_request
