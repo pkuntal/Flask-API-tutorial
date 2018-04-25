@@ -9,7 +9,7 @@ from app import app
 from flask_sqlalchemy import SQLAlchemy
 db=SQLAlchemy(app)
 #from db import db
-db.init(app)
+#db.init(app)
 
 @app.before_first_request
 def create_tables():
