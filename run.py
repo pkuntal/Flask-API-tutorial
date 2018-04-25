@@ -8,7 +8,7 @@ Created on Wed Apr 25 11:42:48 2018
 from app import app
 from db import db
 
-db.init(app)
+db.init_app(app)
 
 @app.before_first_request
 def create_tables():
