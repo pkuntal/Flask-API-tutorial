@@ -5,7 +5,7 @@ Created on Wed Apr 25 11:42:48 2018
 @author: pkuntal
 """
 
-from provisionServer import app
+from app import app
 from db import db
 db.init(app)
 
